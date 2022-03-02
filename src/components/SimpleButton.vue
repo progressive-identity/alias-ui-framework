@@ -1,5 +1,10 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :disabled="disabled">
+  <button
+    :class="classes"
+    :disabled="disabled"
+    type="button"
+    @click="onClick"
+  >
     {{ label }}
   </button>
 </template>
