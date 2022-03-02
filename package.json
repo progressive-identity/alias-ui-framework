@@ -1,7 +1,10 @@
 {
-  "name": "alias-ui-framework",
+  "name": "@alias-code-is-law/alias-ui-framework",
+  "description": "UI framework for Alias projects",
   "version": "0.1.0",
+  "license": "UNLICENSED",
   "main": "src/main.js",
+  "repository": "https://github.com/progressive-identity/alias-ui-framework.git",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -9,11 +12,6 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/progressive-identity/alias-ui-framework"
-  },
-  "license": "UNLICENSED",
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
@@ -47,24 +45,12 @@
     "vue-eslint-parser": "^8.3.0",
     "vue-loader": "^16.8.3"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
-    },
-    "rules": {}
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "homepage": "https://github.com/progressive-identity/alias-ui-framework#readme",
+  "author": "alias-code-is-law"
 }
