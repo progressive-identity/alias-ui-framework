@@ -1,63 +1,63 @@
 /* GENERAL BUTTON STYLE */
 
-.storybook-button {
+.simple-button {
   @apply inline-block cursor-pointer rounded-lg	border-0 leading-none shadow-lg text-white;
 }
 
-.storybook-button:disabled,
-.storybook-button[disabled] {
+.simple-button:disabled,
+.simple-button[disabled] {
   @apply bg-[#B1B1B1];
 }
 
 /* PRIMARY */
 
-.storybook-button--primary {
+.simple-button--primary {
   @apply bg-primary-500;
 }
 
-.storybook-button--primary:hover {
+.simple-button--primary:hover {
   @apply bg-primary-700 outline-none;
 }
 
-.storybook-button--primary:active {
+.simple-button--primary:active {
   @apply bg-primary-500;
 }
 
 /* WARNING */
 
-.storybook-button--warning {
+.simple-button--warning {
   @apply bg-warning;
 }
 
-.storybook-button--warning:hover {
+.simple-button--warning:hover {
   @apply bg-warning-hover outline-none;
 }
 
-.storybook-button--warning:active {
+.simple-button--warning:active {
   @apply bg-warning;
 }
 
 /* DANGER */
 
-.storybook-button--danger {
+.simple-button--danger {
   @apply bg-danger;
 }
-.storybook-button--danger:hover {
+.simple-button--danger:hover {
   @apply bg-danger-hover outline-none;
 }
 
-.storybook-button--danger:active {
+.simple-button--danger:active {
   @apply bg-danger;
 }
 
 /* SIZE */
 
-.storybook-button--small {
+.simple-button--small {
   @apply py-2.5 px-4 text-xs;
 }
-.storybook-button--medium {
+.simple-button--medium {
   @apply py-[0.688rem] px-5 text-base;
 }
-.storybook-button--large {
+.simple-button--large {
   @apply py-3 px-6 text-lg;
 }
