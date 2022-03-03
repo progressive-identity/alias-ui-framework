@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
     content: [
         './public/index.html',
@@ -6,6 +8,13 @@ module.exports = {
     darkMode: 'class', // or 'media' or 'class'
     theme: {
         extend: {
+            colors: {
+                primary: colors.indigo,
+                warning: "#EFBD5D",
+                ["warning-hover"]: "#C39B4C",
+                danger: "#EF5D5D",
+                ["danger-hover"]: "#B94444",
+            },
             zIndex: {
                 '-1': '-1'
             },
