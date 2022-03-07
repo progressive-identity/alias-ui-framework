@@ -7,7 +7,7 @@ module.exports = {
         defineProps: 'readonly',
         defineEmits: 'readonly'
     },
-    extends: [],
+    extends: ['prettier'],
     parser: 'vue-eslint-parser',
     parserOptions: {
         parser: '@babel/eslint-parser'
