@@ -1,9 +1,9 @@
 <template>
   <button
-    :class="classes"
-    :disabled="disabled"
-    type="button"
-    @click="onClick"
+      :class="classes"
+      :disabled="disabled"
+      type="button"
+      @click="onClick"
   >
     {{ label }}
   </button>

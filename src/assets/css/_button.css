@@ -1,63 +1,66 @@
 /* GENERAL BUTTON STYLE */
 
 .simple-button {
-  @apply inline-block cursor-pointer rounded-lg	border-0 leading-none shadow-lg text-white;
+    @apply inline-block cursor-pointer rounded-lg    border-0 leading-none shadow-lg text-white;
 }
 
 .simple-button:disabled,
 .simple-button[disabled] {
-  @apply bg-[#B1B1B1];
+    @apply bg-[#B1B1B1];
 }
 
 /* PRIMARY */
 
 .simple-button--primary {
-  @apply bg-primary-500;
+    @apply bg-primary-500;
 }
 
 .simple-button--primary:hover {
-  @apply bg-primary-700 outline-none;
+    @apply bg-primary-700 outline-none;
 }
 
 .simple-button--primary:active {
-  @apply bg-primary-500;
+    @apply bg-primary-500;
 }
 
 /* WARNING */
 
 .simple-button--warning {
-  @apply bg-warning;
+    @apply bg-warning;
 }
 
 .simple-button--warning:hover {
-  @apply bg-warning-hover outline-none;
+    @apply bg-warning-hover outline-none;
 }
 
 .simple-button--warning:active {
-  @apply bg-warning;
+    @apply bg-warning;
 }
 
 /* DANGER */
 
 .simple-button--danger {
-  @apply bg-danger;
+    @apply bg-danger;
 }
+
 .simple-button--danger:hover {
-  @apply bg-danger-hover outline-none;
+    @apply bg-danger-hover outline-none;
 }
 
 .simple-button--danger:active {
-  @apply bg-danger;
+    @apply bg-danger;
 }
 
 /* SIZE */
 
 .simple-button--small {
-  @apply py-2.5 px-4 text-xs;
+    @apply py-2.5 px-4 text-xs;
 }
+
 .simple-button--medium {
-  @apply py-[0.688rem] px-5 text-base;
+    @apply py-[0.688rem] px-5 text-base;
 }
+
 .simple-button--large {
-  @apply py-3 px-6 text-lg;
+    @apply py-3 px-6 text-lg;
 }
