@@ -26,29 +26,29 @@
 /* WARNING */
 
 .simple-button--warning {
-    @apply bg-warning;
+    @apply bg-yellow-500;
 }
 
 .simple-button--warning:hover {
-    @apply bg-warning-hover outline-none;
+    @apply bg-yellow-700 outline-none;
 }
 
 .simple-button--warning:active {
-    @apply bg-warning;
+    @apply bg-yellow-500;
 }
 
 /* DANGER */
 
 .simple-button--danger {
-    @apply bg-danger;
+    @apply bg-red-500;
 }
 
 .simple-button--danger:hover {
-    @apply bg-danger-hover outline-none;
+    @apply bg-red-700 outline-none;
 }
 
 .simple-button--danger:active {
-    @apply bg-danger;
+    @apply bg-red-500;
 }
 
 /* SIZE */
