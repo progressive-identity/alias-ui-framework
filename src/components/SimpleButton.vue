@@ -5,7 +5,13 @@
     :disabled="disabled"
     v-bind="getSize"
     @click="onClick">
+    <v-icon>
+      {{ iconLeft }}
+    </v-icon>
     {{ label }}
+    <v-icon>
+      {{ iconRight }}
+    </v-icon>
   </v-btn>
 </template>
 
@@ -31,6 +37,14 @@ export default {
       validator: function (value) {
         return ["xs", "sm", "lg", "xl"].indexOf(value) !== -1
       },
+    },
+    iconLeft: {
+      type: String,
+      default: ''
+    },
+    iconRight: {
+      type: String,
+      default: ''
     },
     disabled: {
       type: Boolean,
