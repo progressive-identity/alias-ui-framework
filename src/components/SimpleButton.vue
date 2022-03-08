@@ -38,6 +38,7 @@ export default {
         return ["xs", "sm", "lg", "xl"].indexOf(value) !== -1
       },
     },
+    // List of icons available here https://materialdesignicons.com/
     iconLeft: {
       type: String,
       default: ''
