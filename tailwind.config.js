@@ -10,7 +10,7 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primary: colors.indigo,
+                'alias-primary': colors.indigo,
             },
             zIndex: {
                 '-1': '-1'
