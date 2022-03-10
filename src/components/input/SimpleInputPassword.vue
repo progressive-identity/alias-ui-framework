@@ -1,6 +1,6 @@
 <template>
   <SimpleInputText
-      :icon-right="show ? 'mdi-eye' : 'mdi-eye-off'"
+      :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
       :type="show ? 'text' : 'password'"
       :click-action-icon-right="toggleVisibility"
       v-bind="[$props, $attrs]"
