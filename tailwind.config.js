@@ -1,6 +1,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+    important: true,
     content: [
         './public/index.html',
         './src/**/*.{vue,js,ts,jsx,tsx}'
@@ -9,11 +10,7 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primary: colors.indigo,
-                warning: "#EFBD5D",
-                ["warning-hover"]: "#C39B4C",
-                danger: "#EF5D5D",
-                ["danger-hover"]: "#B94444",
+                'alias-primary': colors.indigo,
             },
             zIndex: {
                 '-1': '-1'
