@@ -54,9 +54,7 @@ export default {
       return this.label.length > 0 ? {['outlined']: true} : {['solo']: true}
     },
     getRules() {
-      const rulesToApply = []
-      this.rules.forEach(rule => rulesToApply.push(validationRules[rule]))
-      return rulesToApply
+      return this.rules.map(rule => validationRules[rule])
     },
     hideHint() {
       const hide = (this.maxLength === '' && this.rules.length === 0)
