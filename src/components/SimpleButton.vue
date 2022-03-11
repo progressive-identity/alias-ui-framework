@@ -1,10 +1,9 @@
-
+<!--Vuetify documentation : https://vuetifyjs.com/en/components/buttons/-->
 <template>
   <v-btn
-    :class="classes"
-    :disabled="disabled"
-    v-bind="getSize"
-    @click="onClick">
+      :class="classes"
+      v-bind="[$props, $attrs]"
+      @click="clickEvent">
     <v-icon>
       {{ iconLeft }}
     </v-icon>
@@ -31,13 +30,6 @@ export default {
         return ["alias-primary", "warning", "danger"].indexOf(value) !== -1
       },
     },
-    size: {
-      type: String,
-      default: 'lg',
-      validator: function (value) {
-        return ["xs", "sm", "lg", "xl"].indexOf(value) !== -1
-      },
-    },
     // List of icons available here https://materialdesignicons.com/
     iconLeft: {
       type: String,
@@ -47,9 +39,11 @@ export default {
       type: String,
       default: ''
     },
-    disabled: {
-      type: Boolean,
-      default: false,
+    clickEvent: {
+      type: Function,
+      default() {
+        return {}
+      }
     },
   },
 
@@ -59,16 +53,6 @@ export default {
         "simple-button": true,
         [`simple-button--${this.type}`]: true,
       }
-    },
-    getSize() {
-      const size = {xs:'x-small',sm:'small',lg:'large',xl:'x-small'}[this.size]
-      return size ? { [size]: true } : {}
-    }
-  },
-
-  methods: {
-    onClick() {
-      this.$emit("onClick")
     },
   },
 }

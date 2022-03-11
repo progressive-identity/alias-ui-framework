@@ -1,7 +1,7 @@
 /* GENERAL BUTTON STYLE */
 
 .simple-button {
-    @apply inline-block cursor-pointer rounded-lg border-0 leading-none shadow-lg text-white normal-case !important;
+    @apply inline-block cursor-pointer rounded-xl border-0 leading-none shadow-lg text-white normal-case !important;
 }
 
 /* PRIMARY */
