@@ -1,5 +1,9 @@
-const emailRules = [v => !!v || 'E-mail is required', v => /.+@.+/.test(v) || 'E-mail must be valid',]
+import is from 'is_js'
 
-const validationRules = {emailRules}
+// The list of predefined rules available with is_js : https://github.com/arasatasaygin/is.js
+const emailRules = v => is.email(v) || 'E-mail must be valid'
+const urlRules = v => is.url(v) || 'URL must be valid'
+
+const validationRules = {emailRules, urlRules}
 
 export default validationRules

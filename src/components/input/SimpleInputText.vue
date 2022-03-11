@@ -35,11 +35,12 @@ export default {
       required: false,
       default: 'primary'
     },
-    // Could be improved in the future to be able to have multiple rules
-    rule: {
-      type: String,
+    rules: {
+      type: Array,
       required: false,
-      default: '',
+      default() {
+        return []
+      },
     },
     clickActionIconRight: {
       type: Function,
@@ -53,10 +54,12 @@ export default {
       return this.label.length > 0 ? {['outlined']: true} : {['solo']: true}
     },
     getRules() {
-      return validationRules[this.rule]
+      const rulesToApply = []
+      this.rules.forEach(rule => rulesToApply.push(validationRules[rule]))
+      return rulesToApply
     },
     hideHint() {
-      const hide = (this.maxLength === '' && this.rule === '')
+      const hide = (this.maxLength === '' && this.rules.length === 0)
       return hide ? {['hide-details']: true} : {}
     },
   },
