@@ -29,11 +29,10 @@ export default {
       required: false,
       default: '',
     },
-    // @TODO to switch to alias-primary once merged
     color: {
       type: String,
       required: false,
-      default: 'primary'
+      default: 'alias-primary'
     },
     rules: {
       type: Array,
