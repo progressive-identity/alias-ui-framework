@@ -1,7 +1,7 @@
 {
   "name": "@alias-code-is-law/alias-ui-framework",
   "description": "UI framework for Alias projects",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "license": "UNLICENSED",
   "main": "src/main.js",
   "repository": "https://github.com/progressive-identity/alias-ui-framework.git",
