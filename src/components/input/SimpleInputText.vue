@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import validationRules from "@/components/input/validationRules"
+import validationRules from "./validationRules"
 
 export default {
   name: "SimpleInputText",

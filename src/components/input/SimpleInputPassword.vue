@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import SimpleInputText from "@/components/input/SimpleInputText"
+import SimpleInputText from "./SimpleInputText"
 
 export default {
   name: "SimpleInputPassword",
