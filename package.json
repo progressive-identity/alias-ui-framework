@@ -6,7 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "compare-node-versions": "node scripts/nodeVersionComparator.mjs",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts, js, vue}": "eslint --fix",
+    "src/**/*.{js,jsx,ts,tsx, json}": "prettier --write",
+    "test/**/*.{js,jsx,ts,tsx}": [
+      "npm run test"
+    ]
   },
   "repository": {
     "type": "git",
@@ -30,7 +39,10 @@
     "@storybook/testing-library": "^0.0.13",
     "@storybook/vue3": "^6.5.10",
     "babel-loader": "^8.2.5",
+    "husky": "^8.0.1",
     "vue-loader": "^16.8.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "chalk": "^5.0.1"
+  }
 }
