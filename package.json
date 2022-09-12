@@ -44,5 +44,11 @@
   },
   "dependencies": {
     "chalk": "^5.0.1"
+  },
+  "engines": {
+    "node": "16.17.0"
+  },
+  "volta": {
+    "node": "16.17.0"
   }
 }
