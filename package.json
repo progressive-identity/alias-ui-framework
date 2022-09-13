@@ -1,64 +1,54 @@
 {
-  "name": "@alias-code-is-law/alias-ui-framework",
-  "description": "UI framework for Alias projects",
-  "version": "0.3.1",
-  "license": "UNLICENSED",
-  "main": "src/main.js",
-  "repository": "https://github.com/progressive-identity/alias-ui-framework.git",
+  "name": "alias-ui-framework",
+  "version": "0.3.0",
+  "description": "Alias UI library",
+  "main": "index.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "compare-node-versions": "node scripts/nodeVersionComparator.mjs",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts, js, vue}": "eslint --fix",
+    "src/**/*.{js,jsx,ts,tsx, json}": "prettier --write",
+    "test/**/*.{js,jsx,ts,tsx}": [
+      "npm run test"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/progressive-identity/alias-ui-framework.git"
+  },
+  "keywords": [],
+  "author": "Alias Tech Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/progressive-identity/alias-ui-framework/issues"
+  },
+  "homepage": "https://github.com/progressive-identity/alias-ui-framework#readme",
+  "devDependencies": {
+    "@babel/core": "^7.19.0",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/builder-webpack4": "^6.5.10",
+    "@storybook/manager-webpack4": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
+    "@storybook/vue3": "^6.5.10",
+    "babel-loader": "^8.2.5",
+    "husky": "^8.0.1",
+    "vue-loader": "^16.8.3"
   },
   "dependencies": {
-    "auto": "^10.32.6",
-    "core-js": "^3.8.3",
-    "vue": "^2.6.14",
-    "vuetify": "^2.6.0",
-    "webpack": "^5.69.1"
+    "chalk": "^5.0.1"
   },
-  "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/eslint-parser": "^7.12.16",
-    "@mdi/font": "^6.5.95",
-    "@storybook/addon-actions": "^6.4.19",
-    "@storybook/addon-docs": "^6.4.19",
-    "@storybook/addon-essentials": "^6.4.19",
-    "@storybook/addon-links": "^6.4.19",
-    "@storybook/builder-webpack5": "^6.4.19",
-    "@storybook/manager-webpack5": "^6.4.19",
-    "@storybook/vue": "^6.4.19",
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-eslint": "~5.0.0",
-    "@vue/cli-service": "~5.0.0",
-    "autoprefixer": "^10.4.2",
-    "babel-loader": "^8.2.3",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.4.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^8.0.3",
-    "is_js": "^0.9.0",
-    "postcss": "^8.4.7",
-    "postcss-import": "^14.0.2",
-    "prettier": "^2.5.1",
-    "prettier-plugin-tailwindcss": "^0.1.8",
-    "sass": "~1.32.0",
-    "sass-loader": "^10.0.0",
-    "tailwindcss": "^3.0.23",
-    "vue-cli-plugin-vuetify": "~2.4.7",
-    "vue-eslint-parser": "^8.3.0",
-    "vue-loader": "^16.8.3",
-    "vue-template-compiler": "^2.6.14",
-    "vuetify-loader": "^1.7.0"
+  "engines": {
+    "node": "16.17.0"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead",
-    "not ie 11"
-  ],
-  "homepage": "https://github.com/progressive-identity/alias-ui-framework#readme",
-  "author": "alias-code-is-law"
+  "volta": {
+    "node": "16.17.0"
+  }
 }
