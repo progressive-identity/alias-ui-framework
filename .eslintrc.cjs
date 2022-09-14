@@ -6,7 +6,7 @@ module.exports = {
     },
     parser: 'vue-eslint-parser',
     parserOptions: {
-        parser: '@babel/eslint-parser',
+        parser: "@typescript-eslint/parser",
         ecmaVersion: 2020,
         sourceType: 'module',
         requireConfigFile: false

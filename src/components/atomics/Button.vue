@@ -1,59 +1,43 @@
 <template>
-  <button
-    type="button"
-    :class="classes"
-    class="rounded-lg alias-text-orange-200"
-    @click="onClick"
-    :style="style"
-  >
+  <button type="button" :class="classes">
+    <!--    <UIcon v-if="icon" :path="icon"/>-->
     {{ label }}
   </button>
 </template>
 
-<script>
-import { reactive, computed } from "vue";
+<script setup lang="ts">
+import { computed, PropType } from "vue";
+import { ColorNames } from "../Colors";
+// TODO: add icon to button
+// import UIcon from '@/components/basic/UIcon.vue'
 
-export default {
-  name: "my-button",
-
-  props: {
-    label: {
-      type: String,
-      required: true,
-    },
-    primary: {
-      type: Boolean,
-      default: false,
-    },
-    size: {
-      type: String,
-      validator: function (value) {
-        return ["small", "medium", "large"].indexOf(value) !== -1;
-      },
-    },
-    backgroundColor: {
-      type: String,
+const props = defineProps({
+  /**
+   * The text displayed on the button
+   */
+  label: {
+    type: String,
+    required: false,
+  },
+  // icon: {
+  //   type: String,
+  //   required: false
+  // },
+  type: {
+    type: String as PropType<ColorNames>,
+    required: false,
+    default: ColorNames.PRIMARY,
+    validator: function (value: string) {
+      return value in ColorNames;
     },
   },
+});
 
-  emits: ["click"],
-
-  setup(props, { emit }) {
-    props = reactive(props);
-    return {
-      classes: computed(() => ({
-        "storybook-button": true,
-        "storybook-button--primary": props.primary,
-        "storybook-button--secondary": !props.primary,
-        [`storybook-button--${props.size || "medium"}`]: true,
-      })),
-      style: computed(() => ({
-        backgroundColor: props.backgroundColor,
-      })),
-      onClick() {
-        emit("click");
-      },
-    };
-  },
-};
+const classes = computed(() => {
+  return {
+    "u-button": true,
+    [`u-button--${props.type}`]: true,
+    // ['u-button--icon']: (props.icon && !props.label)
+  };
+});
 </script>
