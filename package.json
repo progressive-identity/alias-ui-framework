@@ -40,6 +40,7 @@
     },
     "rules": {}
   },
+  "eslintIgnore": ["./src/vite-env.d.ts"],
   "browserslist": [
     "> 1%",
     "last 2 versions",
