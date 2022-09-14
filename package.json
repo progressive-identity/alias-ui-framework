@@ -14,7 +14,7 @@
     "./dist/style.css": "./dist/style.css"
   },
   "lint-staged": {
-    "*.ts": "eslint --fix",
+    "*.{ts,vue,js,tsx,jsx}": "eslint --fix",
     "src/**/*.{js,jsx,ts,tsx,vue,json}": "prettier --write"
   },
   "version": "0.0.4",
