@@ -24,7 +24,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "compare-node-versions": "node scripts/nodeVersionComparator.mjs"
   },
   "eslintConfig": {
     "root": true,
@@ -40,7 +41,9 @@
     },
     "rules": {}
   },
-  "eslintIgnore": ["./src/vite-env.d.ts"],
+  "eslintIgnore": [
+    "./src/vite-env.d.ts"
+  ],
   "browserslist": [
     "> 1%",
     "last 2 versions",
@@ -76,5 +79,11 @@
     "vite": "^3.1.0",
     "vue-loader": "^16.8.3",
     "vue-tsc": "^0.40.4"
+  },
+  "engines": {
+    "node": "16.17.0"
+  },
+  "volta": {
+    "node": "16.17.0"
   }
 }
