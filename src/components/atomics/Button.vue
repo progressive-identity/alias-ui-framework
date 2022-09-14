@@ -2,7 +2,7 @@
   <button
     type="button"
     :class="classes"
-    class="rounded-lg"
+    class="rounded-lg alias-text-orange-200"
     @click="onClick"
     :style="style"
   >

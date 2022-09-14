@@ -6,7 +6,7 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/stories/index.js'),
+      entry: path.resolve(__dirname, 'src/components/index.js'),
       name: 'alias-ui-framework',
       fileName: (format) => `alias-ui-framework.${format}.js`
     },
