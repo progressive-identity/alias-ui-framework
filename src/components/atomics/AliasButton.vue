@@ -1,5 +1,5 @@
 <template>
-  <button type="button" :class="classes">
+  <button type="button">
     <!--    <UIcon v-if="icon" :path="icon"/>-->
     {{ label }}
   </button>
@@ -24,8 +24,8 @@ const props = defineProps({
   //   required: false
   // },
   type: {
-    type: String as PropType<ColorNames>,
-    required: false,
+    type: String as PropType<"primary" | "secondary">,
+    required: true,
     default: ColorNames.PRIMARY,
     validator: function (value: string) {
       return value in ColorNames;
@@ -33,11 +33,11 @@ const props = defineProps({
   },
 });
 
-const classes = computed(() => {
-  return {
-    "u-button": true,
-    [`u-button--${props.type}`]: true,
-    // ['u-button--icon']: (props.icon && !props.label)
-  };
-});
+// const classes = computed(() => {
+//   return {
+//     "u-button": true,
+//     [`u-button--${props.type}`]: true,
+//     // ['u-button--icon']: (props.icon && !props.label)
+//   };
+// });
 </script>
