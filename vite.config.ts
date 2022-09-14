@@ -24,6 +24,9 @@ export default defineConfig({
       }
     }
   },
-  plugins: [vue(), dts()]
+  plugins: [vue(), dts({
+      outputDir: path.resolve(__dirname, 'dist/types')
+  }
+  )]
 })
 
