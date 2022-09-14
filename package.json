@@ -5,7 +5,7 @@
   ],
   "main": "./dist/lib/alias-ui-framework.umd.js",
   "module": "./dist/lib/alias-ui-framework.es.js",
-  "types": "./dist/types/index.d.ts",
+  "typings": "./dist/types/index.d.ts",
   "sideEffects": false,
   "exports": {
     ".": {
