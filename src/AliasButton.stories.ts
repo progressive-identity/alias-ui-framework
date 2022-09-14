@@ -1,7 +1,7 @@
 import Button from "./AliasButton.vue";
 import { Meta, StoryFn } from "@storybook/vue3";
-import { ArgTypeUtils } from "../../../utils/ArgTypeUtils";
-import { ColorNames } from "../Colors";
+import { ArgTypeUtils } from "../utils/ArgTypeUtils";
+import { ColorNames } from "./Colors";
 
 export default {
   title: "Atomics/Button",

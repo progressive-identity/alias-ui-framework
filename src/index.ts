@@ -1,5 +1,5 @@
 import "tailwindcss/tailwind.css";
 
-import Button from "./components/atomics/AliasButton.vue";
+import Button from "./AliasButton.vue";
 
 export { Button };
