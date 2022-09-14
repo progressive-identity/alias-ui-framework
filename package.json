@@ -18,7 +18,7 @@
     "*.{ts,vue,js,tsx,jsx}": "eslint --fix",
     "src/**/*.{js,jsx,ts,tsx,vue,json}": "prettier --write"
   },
-  "version": "0.0.10",
+  "version": "0.0.11",
   "type": "module",
   "scripts": {
     "dev": "vite",
