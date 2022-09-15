@@ -1,0 +1,24 @@
+{
+  "name": "alias-ui-framework-presets",
+  "version": "0.0.1",
+  "main": "tailwind-presets.cjs",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/lib/alias-ui-framework-presets.es.js",
+  "scripts": {
+    "build": "rm -rf ./dist/* && vite build"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.8",
+    "vite": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=16.17.0"
+  },
+  "volta": {
+    "node": "16.17.0"
+  },
+  "sideEffects": false
+}
