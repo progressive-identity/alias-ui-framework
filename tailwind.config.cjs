@@ -5,7 +5,7 @@
 const colors = require("tailwindcss/colors.js");
 module.exports = {
   presets: [
-    require('./tailwind-presets.cjs')
+    require('./presets/tailwind-presets.cjs')
   ],
   content: ["./src/**/*.{html,js,vue,ts,tsx,jsx}"],
   plugins: [],
