@@ -9,8 +9,8 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "import": "./dist/alias-ui-framework.es.js",
-      "require": "./dist/alias-ui-framework.umd.js"
+      "import": "./dist/lib/alias-ui-framework.es.js",
+      "require": "./dist/lib/alias-ui-framework.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
   },
@@ -18,7 +18,7 @@
     "*.{ts,vue,js,tsx,jsx}": "eslint --fix",
     "src/**/*.{js,jsx,ts,tsx,vue,json}": "prettier --write"
   },
-  "version": "0.0.14",
+  "version": "0.0.15",
   "type": "module",
   "scripts": {
     "dev": "vite",
