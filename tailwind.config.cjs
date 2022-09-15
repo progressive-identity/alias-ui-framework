@@ -1,16 +1,13 @@
 /** @type {import('tailwindcss').Config} */
+
+/** WARNING: new theme infos or plugins that need to be exported in the npm package MUST be declared in tailwind-presets.ts */
+
+const colors = require("tailwindcss/colors.js");
 module.exports = {
+  presets: [
+    require('./tailwind-presets.cjs')
+  ],
   content: ["./src/**/*.{html,js,vue,ts,tsx,jsx}"],
-  theme: {
-    screens: {
-      xs: '375px',
-      sm: '600px',
-      md: '900px',
-      lg: '1200px',
-      xl: '1536px',
-    },
-    extend: {},
-  },
   plugins: [],
   corePlugins: {
     preflight: false,

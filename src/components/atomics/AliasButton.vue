@@ -31,7 +31,8 @@ defineProps({
 </script>
 
 <template>
-  <button type="button">
+  <button type="button" class="alias-bg-primary-700 alias-text-primary-500">
+    Coucou
     <!--    <UIcon v-if="icon" :path="icon"/>-->
     {{ label }} {{ type }} {{ testTest }}
   </button>
