@@ -19,6 +19,12 @@ module.exports = {
   },
   rules: {
     "semi": [2, "never"],
-    "comma-dangle": ["error", "always-multiline"]
+    "comma-dangle": [2, {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "ignore"
+    }]
   }
 }
