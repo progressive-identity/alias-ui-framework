@@ -3,6 +3,11 @@ require("@rushstack/eslint-patch/modern-module-resolution")
 
 module.exports = {
   root: true,
+  env: {
+    'vue/setup-compiler-macros': true,
+    browser: true,
+    node: true
+  },
   extends: [
     "plugin:vue/vue3-essential",
     "eslint:recommended",
@@ -13,6 +18,7 @@ module.exports = {
     ecmaVersion: "latest"
   },
   rules: {
-    "semi": [2, "never"]
+    "semi": [2, "never"],
+    "comma-dangle": ["error", "always-multiline"]
   }
 }

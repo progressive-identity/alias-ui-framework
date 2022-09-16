@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import { computed, PropType } from "vue";
-import { ColorNames } from "../../AliasColors";
+import { PropType } from 'vue'
+import { ColorNames } from '../../AliasColors'
 // TODO: add icon to button
 // import UIcon from '@/components/basic/UIcon.vue'
 defineProps({
   /**
    * The text displayed on the button
    */
-  type: { type: String as PropType<ColorNames>, required: true },
+  type: {
+    type: String as PropType<ColorNames>,
+  },
   // icon: {
   //   type: String,
   //   required: false
@@ -20,7 +22,7 @@ defineProps({
   //     return value in ColorNames
   //   }
   // }
-});
+})
 // const classes = computed(() => {
 //   return {
 //     "u-button": true,
