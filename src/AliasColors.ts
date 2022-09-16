@@ -1,6 +1,6 @@
-export enum ColorNames {
-  PRIMARY = "primary",
-  SECONDARY = "secondary",
-  WARNING = "warning",
-  DANGER = "danger",
+export enum AliasColorNames {
+  PRIMARY = 'primary',
+  SECONDARY = 'secondary',
+  WARNING = 'warning',
+  DANGER = 'danger',
 }
