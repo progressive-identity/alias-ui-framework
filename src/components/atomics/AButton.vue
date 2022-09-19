@@ -1,3 +1,9 @@
+<template>
+  <button type="button" v-bind="$attrs" :class="classes">
+    <!--    <UIcon v-if="icon" :path="icon"/>-->
+    {{ label }}
+  </button>
+</template>
 <script setup lang="ts">
 import { computed, PropType, toRefs } from 'vue'
 import { AliasColorNames } from '../../AliasColors'
@@ -26,7 +32,10 @@ const props = defineProps({
     },
   },
 
-  // TODO: add size
+  /**
+   * The size of the button
+   * The possible values are listed in {@link ButtonSizes}
+   */
   size: {
     type: String as PropType<ButtonSizes>,
     required: false,
@@ -50,13 +59,6 @@ const classes = computed(() => {
   }
 })
 </script>
-
-<template>
-  <button type="button" :class="classes">
-    <!--    <UIcon v-if="icon" :path="icon"/>-->
-    {{ label }}
-  </button>
-</template>
 <style scoped>
 /* GENERAL BUTTON STYLE */
 
