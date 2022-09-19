@@ -34,6 +34,7 @@ const props = defineProps({
 })
 
 const { color } = toRefs(props)
+
 const classes = computed(() => {
   return {
     'u-button': true,
@@ -50,74 +51,73 @@ const classes = computed(() => {
   </button>
 </template>
 <style scoped>
-/*TODO: prefix classes*/
 /* GENERAL BUTTON STYLE */
 
 .u-button {
-  @apply inline-flex items-center px-5 py-2 border shadow-sm text-white font-medium text-sm rounded-md;
+  @apply alias-inline-flex alias-cursor-pointer alias-items-center alias-rounded-md alias-border alias-px-5 alias-py-2 alias-text-sm alias-font-medium alias-text-white alias-shadow-sm;
 }
 
 .u-button:focus {
-  @apply ring-2 ring-offset-2;
+  @apply alias-ring-2 alias-ring-offset-2;
 }
 
 .u-button--icon {
-  @apply px-2 py-2;
+  @apply alias-px-2 alias-py-2;
 }
 
 /* PRIMARY */
 
 .u-button--primary {
-  @apply bg-primary-500;
+  @apply alias-bg-primary-500;
 }
 
 .u-button--primary:hover {
-  @apply bg-primary-700 outline-none;
+  @apply alias-bg-primary-700 alias-outline-none;
 }
 
 .u-button--primary:focus {
-  @apply ring-primary-500;
+  @apply alias-ring-primary-500;
 }
 
 /* SECONDARY */
 
 .u-button--secondary {
-  @apply bg-white text-gray-700 border-gray-300;
+  @apply alias-bg-secondary-500;
 }
 
 .u-button--secondary:hover {
-  @apply bg-gray-50 outline-none;
+  @apply alias-bg-secondary-700 alias-outline-none;
 }
 
 .u-button--secondary:focus {
-  @apply ring-primary-500;
+  @apply alias-ring-secondary-500;
 }
 
 /* WARNING */
 
 .u-button--warning {
-  @apply bg-yellow-500;
+  @apply alias-bg-warning-500;
 }
 
 .u-button--warning:hover {
-  @apply bg-yellow-700 outline-none;
+  @apply alias-bg-warning-700 alias-outline-none;
 }
 
 .u-button--warning:focus {
-  @apply ring-yellow-500;
+  @apply alias-ring-warning-500;
 }
 
 /* DANGER */
 
 .u-button--danger {
-  @apply bg-red-500;
+  @apply alias-bg-danger-500;
 }
 
 .u-button--danger:hover {
-  @apply bg-red-700 outline-none;
+  @apply alias-bg-danger-700 alias-outline-none;
 }
 
 .u-button--danger:focus {
-  @apply ring-red-500;
+  @apply alias-ring-danger-500;
 }
 </style>
