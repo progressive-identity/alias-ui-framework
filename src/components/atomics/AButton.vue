@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, PropType, toRefs } from 'vue'
 import { AliasColorNames } from '../../AliasColors'
+import { ButtonSizes } from '../../AliasSizes'
 // TODO: add icon to button
 // import UIcon from '@/components/basic/UIcon.vue'
 const props = defineProps({
@@ -26,6 +27,11 @@ const props = defineProps({
   },
 
   // TODO: add size
+  size: {
+    type: String as PropType<ButtonSizes>,
+    required: false,
+    default: ButtonSizes.MEDIUM,
+  },
   // TODO: add icon
   // icon: {
   //   type: String,
@@ -33,12 +39,13 @@ const props = defineProps({
   // },
 })
 
-const { color } = toRefs(props)
+const { color, size } = toRefs(props)
 
 const classes = computed(() => {
   return {
     'u-button': true,
     [`u-button--${color.value}`]: true,
+    [`u-button--${size.value}`]: true,
     // ['u-button--icon']: (props.icon && !props.label)
   }
 })
@@ -54,7 +61,7 @@ const classes = computed(() => {
 /* GENERAL BUTTON STYLE */
 
 .u-button {
-  @apply alias-inline-flex alias-cursor-pointer alias-items-center alias-rounded-md alias-border alias-px-5 alias-py-2 alias-text-sm alias-font-medium alias-text-white alias-shadow-sm;
+  @apply alias-inline-flex alias-cursor-pointer alias-items-center alias-rounded-md alias-border alias-font-medium alias-text-white alias-shadow-sm;
 }
 
 .u-button:focus {
@@ -63,6 +70,24 @@ const classes = computed(() => {
 
 .u-button--icon {
   @apply alias-px-2 alias-py-2;
+}
+
+/* SMALL SIZE */
+
+.u-button--small {
+  @apply alias-px-2.5 alias-py-1.5 alias-text-xs;
+}
+
+/* MEDIUM SIZE */
+
+.u-button--medium {
+  @apply alias-px-4 alias-py-2 alias-text-sm;
+}
+
+/* LARGE SIZE */
+
+.u-button--large {
+  @apply alias-px-6 alias-py-3 alias-text-base;
 }
 
 /* PRIMARY */
