@@ -28,5 +28,6 @@ module.exports = {
       "exports": "always-multiline",
       "functions": "ignore"
 }]
+
   }
 }
