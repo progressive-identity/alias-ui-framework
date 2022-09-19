@@ -12,12 +12,14 @@ module.exports = {
     "plugin:vue/vue3-essential",
     "eslint:recommended",
     "@vue/eslint-config-typescript",
-    "@vue/eslint-config-prettier", "standard"
+    "@vue/eslint-config-prettier", "standard", "prettier"
   ],
+  plugins: ["prettier"],
   parserOptions: {
     ecmaVersion: "latest"
   },
   rules: {
+    "prettier/prettier": ["error"],
     "semi": [2, "never"],
     "comma-dangle": [2, {
       "arrays": "always-multiline",
@@ -25,6 +27,7 @@ module.exports = {
       "imports": "always-multiline",
       "exports": "always-multiline",
       "functions": "ignore"
-    }]
+}]
+
   }
 }
