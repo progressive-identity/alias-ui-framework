@@ -4,3 +4,9 @@ export enum ButtonSizes {
   MEDIUM = 'medium',
   LARGE = 'large',
 }
+
+export enum IconSizes {
+  SMALL = 'small',
+  MEDIUM = 'medium',
+  LARGE = 'large',
+}

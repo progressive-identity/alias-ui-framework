@@ -1,6 +1,11 @@
 <template>
-  <button type="button" v-bind="$attrs" :class="classes">
-    <!--    <UIcon v-if="icon" :path="icon"/>-->
+  <button type="button" v-bind="$attrs" :class="buttonClasses">
+    <AIcon
+      v-if="iconPath"
+      :path="iconPath"
+      :size="iconSize"
+      :class="iconClasses"
+    />
     {{ label }}
   </button>
 </template>
@@ -8,8 +13,7 @@
 import { computed, PropType, toRefs } from 'vue'
 import { AliasColorNames } from '../../AliasColors'
 import { ButtonSizes } from '../../AliasSizes'
-// TODO: add icon to button
-// import UIcon from '@/components/basic/UIcon.vue'
+import AIcon from './AIcon.vue'
 const props = defineProps({
   /**
    * The text displayed on the button
@@ -41,22 +45,36 @@ const props = defineProps({
     required: false,
     default: ButtonSizes.MEDIUM,
   },
-  // TODO: add icon
-  // icon: {
-  //   type: String,
-  //   required: false
-  // },
+
+  /**
+   * The icon svg path of the button
+   * This path is agnostic and can be taken from mdi components or heroicons
+   */
+  iconPath: {
+    type: String,
+    required: false,
+  },
 })
 
-const { color, size } = toRefs(props)
+const { color, size, iconPath, label } = toRefs(props)
 
-const classes = computed(() => {
+const buttonClasses = computed(() => {
   return {
     'u-button': true,
     [`u-button--${color.value}`]: true,
     [`u-button--${size.value}`]: true,
-    // ['u-button--icon']: (props.icon && !props.label)
+    'u-button--icon': iconPath?.value && !label?.value,
   }
+})
+
+const iconClasses = computed(() => {
+  return {
+    'alias-mr-1': label?.value,
+  }
+})
+
+const iconSize = computed(() => {
+  return size.value
 })
 </script>
 <style scoped>

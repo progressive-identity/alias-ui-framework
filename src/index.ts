@@ -1,8 +1,8 @@
 import 'tailwindcss/tailwind.css'
 
-import AliasButton from './components/atomics/AButton.vue'
+import AButton from './components/atomics/AButton.vue'
+import AIcon from './components/atomics/AIcon.vue'
 import { AliasColorNames } from './AliasColors'
-// @ts-ignore
-import AliasPresets from '../tailwind-presets.cjs'
+import * as AliasSizes from './AliasSizes'
 
-export { AliasButton, AliasColorNames, AliasPresets }
+export { AButton, AIcon, AliasColorNames, AliasSizes }
