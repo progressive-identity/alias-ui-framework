@@ -55,6 +55,7 @@
   ],
   "dependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
+    "@headlessui/vue": "^1.7.2",
     "vue": "^3.2.37"
   },
   "devDependencies": {
