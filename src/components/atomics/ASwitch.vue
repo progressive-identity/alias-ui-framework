@@ -32,10 +32,16 @@ import { ColorNames } from '../../AliasColors'
 
 const props = defineProps({
   type: { type: String as PropType<ColorNames>, required: true },
+  /**
+   * The text displayed on the left of the switch
+   */
   label: {
     type: String,
     default: ''
   },
+  /**
+   * The value of the switch, if it has been checked or not
+   */
   checked: {
     type: Boolean,
     required: true
