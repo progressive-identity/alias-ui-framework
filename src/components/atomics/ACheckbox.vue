@@ -1,39 +1,39 @@
 <template>
   <div class="block py-2">
-    <label for="name" class="u-label"
-      >{{ label }}
-      <span v-if="required && label.length > 0">
-        {{ $t('errors.checked') }}</span
-      >
-    </label>
-    <p
-      v-if="!state.valid"
-      v-for="error in state.errors"
-      class="form-error"
-      id="error"
-    >
-      {{ error }}
-    </p>
-    <fieldset class="py-2 space-y-5">
-      <div v-for="(element, index) in list" class="relative flex items-start">
-        <div class="flex items-center h-5">
-          <input
-            :id="getName(element)"
-            :name="getName(element)"
-            v-model="state.checkBoxes[index]"
-            type="checkbox"
-            @click="modifyList(element, index)"
-            @change="validate(state, props, modelValue)"
-            class="focus:ring-primary-500 h-4 w-4 text-primary-600 border-gray-300 rounded"
-          />
-        </div>
-        <div class="ml-3 text-sm">
-          <label :for="getName(element)" class="text-sm">{{
-            getName(element)
-          }}</label>
-        </div>
-      </div>
-    </fieldset>
+    <!--    <label for="name" class="u-label"-->
+    <!--      >{{ label }}-->
+    <!--      <span v-if="required && label.length > 0">-->
+    <!--        {{ $t('errors.checked') }}</span-->
+    <!--      >-->
+    <!--    </label>-->
+    <!--    <p-->
+    <!--      v-if="!state.valid"-->
+    <!--      v-for="error in state.errors"-->
+    <!--      class="form-error"-->
+    <!--      id="error"-->
+    <!--    >-->
+    <!--      {{ error }}-->
+    <!--    </p>-->
+    <!--    <fieldset class="py-2 space-y-5">-->
+    <!--      <div v-for="(element, index) in list" class="relative flex items-start">-->
+    <!--        <div class="flex items-center h-5">-->
+    <!--          <input-->
+    <!--            :id="getName(element)"-->
+    <!--            :name="getName(element)"-->
+    <!--            v-model="state.checkBoxes[index]"-->
+    <!--            type="checkbox"-->
+    <!--            @click="modifyList(element, index)"-->
+    <!--            @change="validate(state, props, modelValue)"-->
+    <!--            class="focus:ring-primary-500 h-4 w-4 text-primary-600 border-gray-300 rounded"-->
+    <!--          />-->
+    <!--        </div>-->
+    <!--        <div class="ml-3 text-sm">-->
+    <!--          <label :for="getName(element)" class="text-sm">{{-->
+    <!--            getName(element)-->
+    <!--          }}</label>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </fieldset>-->
   </div>
 </template>
 <script setup>
@@ -65,7 +65,7 @@ const props = defineProps({
 const state = reactive({
   valid: true,
   errors: [],
-  checkBoxes: Array(props.list.length),
+  // checkBoxes: Array(props.list.length),
 })
 
 const emits = defineEmits(['update:modelValue'])

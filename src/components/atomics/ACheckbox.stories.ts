@@ -1,6 +1,6 @@
 import ACheckbox from './ACheckbox.vue'
 import { Meta, StoryFn } from '@storybook/vue3'
-import { ArgTypeUtils } from '../../../utils/ArgTypeUtils'
+// import { ArgTypeUtils } from '../../../utils/ArgTypeUtils'
 // import { AliasColorNames } from '../../AliasColors'
 // import { ButtonSizes } from '../../AliasSizes'
 
