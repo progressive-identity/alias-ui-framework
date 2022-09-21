@@ -36,7 +36,7 @@
 <script setup lang="ts">
 import { computed, nextTick, PropType, reactive, toRefs } from 'vue'
 import { HtmlInputTypeAttribute, HtmlInputTypes } from '../../HtmlTypes'
-import { validate } from '../../composables/useValidation'
+import { Rule, validate } from '../../composables/useValidation'
 import { InputSizes } from '../../AliasSizes'
 import AIcon from './AIcon.vue'
 
@@ -85,7 +85,7 @@ const props = defineProps({
     },
   },
   rules: {
-    type: Array as PropType<{ (v: string): string }[]>,
+    type: Array as PropType<Rule[]>,
     default: () => [],
     required: false,
   },
