@@ -1,8 +1,10 @@
 // @ts-ignore
-import { ERROR_MESSAGES, isEMailValid, isEmpty } from '@/utils/validation.ts'
+import { ERROR_MESSAGES, isEMailValid, isEmpty } from '../utils/validation.ts'
 // import { refreshCookies } from '@/utils/cookieManagement.js'
 
-export function validate(state: any, props: any, value: any) {
+export function validate(state, props, value) {
+  console.log('VALIDATE', props)
+  console.log('VALUE', isEmpty(value))
   // refreshCookies()
   state.valid = true
   state.errors = []
@@ -18,7 +20,7 @@ export function validate(state: any, props: any, value: any) {
   }
 }
 
-function writeError(state: any, errorMessage: string) {
+function writeError(state, errorMessage) {
   state.valid = false
   state.errors.push(errorMessage)
 }

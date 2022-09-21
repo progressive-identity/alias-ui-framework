@@ -1,6 +1,7 @@
 import 'tailwindcss/tailwind.css'
 
 import ASwitch from './components/atomics/ASwitch.vue'
+import ACheckbox from './components/atomics/ACheckbox.vue'
 import AButton from './components/atomics/AButton.vue'
 import AIcon from './components/atomics/AIcon.vue'
 import AInput from './components/inputs/AInput.vue'
@@ -14,6 +15,7 @@ export {
   AButton,
   AIcon,
   AInput,
+  ACheckbox,
   ASwitch,
   AliasColorNames,
   AliasSizes,
