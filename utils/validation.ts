@@ -1,7 +1,6 @@
 import is from 'is_js'
 
-// TODO should use is_js https://www.npmjs.com/package/is_js
-export function isEmpty(value: unknown) {
+export function isEmpty(value: unknown): boolean {
   return is.empty(value)
 }
 
