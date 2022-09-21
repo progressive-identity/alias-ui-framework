@@ -38,7 +38,7 @@ import { computed, nextTick, PropType, reactive, toRefs } from 'vue'
 import { HtmlInputTypeAttribute, HtmlInputTypes } from '../../HtmlTypes'
 import { Rule, validate } from '../../composables/useValidation'
 import { InputSizes } from '../../AliasSizes'
-import AIcon from './AIcon.vue'
+import AIcon from '../atomics/AIcon.vue'
 
 const state = reactive({ valid: true, errors: [] })
 const props = defineProps({
@@ -127,7 +127,7 @@ export default {
 /* GENERAL INPUT STYLE */
 
 .a-input {
-  @apply alias-flex alias-w-full alias-justify-between alias-rounded-md alias-border alias-border-solid alias-border-gray-300 alias-p-2 alias-text-sm;
+  @apply alias-flex alias-w-full alias-justify-between alias-rounded-md alias-border alias-border-solid alias-border-gray-300 alias-p-2 alias-text-sm placeholder:alias-italic placeholder:alias-text-gray-300;
 }
 
 .u-button:focus-within {
