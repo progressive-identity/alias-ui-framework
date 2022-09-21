@@ -1,0 +1,16 @@
+language: node_js
+branches:
+  only:
+    - main
+    - staging
+install:
+  - npm ci
+cache: npm
+script:
+  - npm run build
+deploy:
+  provider: script
+  script: npm run semantic-release
+  on:
+    branch: main
+
