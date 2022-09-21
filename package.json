@@ -65,6 +65,7 @@
   "dependencies": {
     "@alias-code-is-law/alias-tailwind-presets": "^0.0.1",
     "@headlessui/vue": "^1.7.2",
+    "@heroicons/vue": "^2.0.11",
     "@rushstack/eslint-patch": "^1.2.0",
     "vue": "^3.2.37"
   },
