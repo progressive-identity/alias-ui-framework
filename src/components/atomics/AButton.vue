@@ -1,8 +1,9 @@
 <template>
   <button type="button" v-bind="$attrs" :class="buttonClasses">
     <AIcon
-      v-if="iconPath"
-      :path="iconPath"
+      v-if="iconName"
+      :name="iconName"
+      :type="iconType"
       :size="iconSize"
       :class="iconClasses"
     />
@@ -14,6 +15,8 @@ import { computed, PropType, toRefs } from 'vue'
 import { AliasColorNames } from '../../AliasColors'
 import { ButtonSizes } from '../../AliasSizes'
 import AIcon from './AIcon.vue'
+import { AliasIconTypes } from '../../AliasIcons'
+
 const props = defineProps({
   /**
    * The text displayed on the button
@@ -32,7 +35,8 @@ const props = defineProps({
     required: false,
     default: AliasColorNames.PRIMARY,
     validator: function (value: string) {
-      return value in AliasColorNames
+      const stringArr: readonly string[] = Object.values(AliasColorNames)
+      return stringArr.includes(value)
     },
   },
 
@@ -47,23 +51,34 @@ const props = defineProps({
   },
 
   /**
-   * The icon svg path of the button
-   * This path is agnostic and can be taken from mdi components or heroicons
+   * The name of the heroicon svg icon
+   * possible values defined here {@link https://unpkg.com/browse/@heroicons/vue@2.0.11/}
+   * Example: ArchiveBox
+   * @see {@link AIcon}
    */
-  iconPath: {
+  iconName: {
     type: String,
     required: false,
   },
+  iconType: {
+    type: String as PropType<AliasIconTypes>,
+    default: AliasIconTypes.OUTLINE,
+    required: false,
+    validator: function (value: string) {
+      const stringArr: readonly string[] = Object.values(AliasIconTypes)
+      return stringArr.includes(value)
+    },
+  },
 })
 
-const { color, size, iconPath, label } = toRefs(props)
+const { color, size, iconName, label } = toRefs(props)
 
 const buttonClasses = computed(() => {
   return {
-    'u-button': true,
-    [`u-button--${color.value}`]: true,
-    [`u-button--${size.value}`]: true,
-    'u-button--icon': iconPath?.value && !label?.value,
+    'a-button': true,
+    [`a-button--${color.value}`]: true,
+    [`a-button--${size.value}`]: true,
+    'a-button--icon': iconName?.value && !label?.value,
   }
 })
 
@@ -80,89 +95,89 @@ const iconSize = computed(() => {
 <style scoped>
 /* GENERAL BUTTON STYLE */
 
-.u-button {
+.a-button {
   @apply alias-inline-flex alias-cursor-pointer alias-items-center alias-rounded-md alias-border alias-font-medium alias-text-white alias-shadow-sm;
 }
 
-.u-button:focus {
+.a-button:focus {
   @apply alias-ring-2 alias-ring-offset-2;
 }
 
-.u-button--icon {
+.a-button--icon {
   @apply alias-px-2 alias-py-2;
 }
 
 /* SMALL SIZE */
 
-.u-button--small {
+.a-button--small {
   @apply alias-px-2.5 alias-py-1.5 alias-text-xs;
 }
 
 /* MEDIUM SIZE */
 
-.u-button--medium {
+.a-button--medium {
   @apply alias-px-4 alias-py-2 alias-text-sm;
 }
 
 /* LARGE SIZE */
 
-.u-button--large {
+.a-button--large {
   @apply alias-px-6 alias-py-3 alias-text-base;
 }
 
 /* PRIMARY */
 
-.u-button--primary {
+.a-button--primary {
   @apply alias-bg-primary-500;
 }
 
-.u-button--primary:hover {
+.a-button--primary:hover {
   @apply alias-bg-primary-700 alias-outline-none;
 }
 
-.u-button--primary:focus {
+.a-button--primary:focus {
   @apply alias-ring-primary-500;
 }
 
 /* SECONDARY */
 
-.u-button--secondary {
+.a-button--secondary {
   @apply alias-bg-secondary-500;
 }
 
-.u-button--secondary:hover {
+.a-button--secondary:hover {
   @apply alias-bg-secondary-700 alias-outline-none;
 }
 
-.u-button--secondary:focus {
+.a-button--secondary:focus {
   @apply alias-ring-secondary-500;
 }
 
 /* WARNING */
 
-.u-button--warning {
+.a-button--warning {
   @apply alias-bg-warning-500;
 }
 
-.u-button--warning:hover {
+.a-button--warning:hover {
   @apply alias-bg-warning-700 alias-outline-none;
 }
 
-.u-button--warning:focus {
+.a-button--warning:focus {
   @apply alias-ring-warning-500;
 }
 
 /* DANGER */
 
-.u-button--danger {
+.a-button--danger {
   @apply alias-bg-danger-500;
 }
 
-.u-button--danger:hover {
+.a-button--danger:hover {
   @apply alias-bg-danger-700 alias-outline-none;
 }
 
-.u-button--danger:focus {
+.a-button--danger:focus {
   @apply alias-ring-danger-500;
 }
 </style>
