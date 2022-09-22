@@ -26,6 +26,7 @@
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "build-static-storybook-webapp":"expo build:web",
     "compare-node-versions": "node scripts/nodeVersionComparator.mjs",
     "build:types": "vue-tsc --declaration --emitDeclarationOnly",
     "typecheck": "vue-tsc --noEmit",
