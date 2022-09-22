@@ -12,7 +12,7 @@
     "declaration": true,
     "declarationMap": true,
     "skipLibCheck": true,
-    "baseUrl": "./"
+    "baseUrl": "./",
   },
   "include": [
     "src/**/*.ts",
@@ -20,5 +20,5 @@
     "src/**/*.tsx",
     "src/**/*.vue"
   ],
-  "references": [{ "path":  "./tsconfig.cjs.json"}]
+  "references": [{ "path":  "./tsconfig.cjs.json"}, { "path":  "./tsconfig.esm.json"}]
 }

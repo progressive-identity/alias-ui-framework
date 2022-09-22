@@ -21,16 +21,7 @@
     />
   </div>
 
-  <template v-if="!state.valid">
-    <span
-      v-for="(error, i) in state.errors"
-      :key="error + i"
-      class="form-error"
-      id="error"
-    >
-      {{ error }}
-    </span>
-  </template>
+  <AInputErrors v-if="!state.valid" :errors="state.errors" />
 </template>
 
 <script setup lang="ts">
@@ -39,6 +30,7 @@ import { HtmlInputTypeAttribute, HtmlInputTypes } from '../../HtmlTypes'
 import { Rule, validate } from '../../composables/useValidation'
 import { InputSizes } from '../../AliasSizes'
 import AIcon from '../atomics/AIcon.vue'
+import AInputErrors from './AInputErrors.vue'
 
 const state = reactive({ valid: true, errors: [] })
 const props = defineProps({
@@ -154,9 +146,5 @@ export default {
 
 .a-label {
   @apply alias-block alias-text-xs alias-font-medium alias-text-gray-900;
-}
-
-.form-error {
-  @apply alias-mt-1 alias-block alias-text-sm alias-font-normal alias-text-danger-600;
 }
 </style>

@@ -1,7 +1,7 @@
 import 'tailwindcss/tailwind.css'
 
 import ASwitch from './components/atomics/ASwitch.vue'
-import ACheckbox from './components/atomics/ACheckbox.vue'
+import ACheckbox from './components/inputs/ACheckbox.vue'
 import AButton from './components/atomics/AButton.vue'
 import AIcon from './components/atomics/AIcon.vue'
 import AInput from './components/inputs/AInput.vue'
