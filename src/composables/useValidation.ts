@@ -5,7 +5,7 @@ type Props = { [key: string]: any }
 type Value = unknown
 export type Rule = { (v: Value): string | boolean }
 
-export function validate(state: State, props: Props, value: Value) {
+export function validate(state: State, props: Props, value?: Value) {
   // TODO: handle all input types
   state.valid = true
   state.errors = []
