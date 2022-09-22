@@ -3,8 +3,6 @@ import { ERROR_MESSAGES, isEMailValid, isEmpty } from '../utils/validation.ts'
 // import { refreshCookies } from '@/utils/cookieManagement.js'
 
 export function validate(state, props, value) {
-  console.log('VALIDATE', props)
-  console.log('VALUE', isEmpty(value))
   // refreshCookies()
   state.valid = true
   state.errors = []
