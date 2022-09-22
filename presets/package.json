@@ -1,12 +1,11 @@
 {
-  "name": "alias-ui-framework-presets",
+  "name": "@alias-code-is-law/alias-ui-framework-presets",
   "version": "0.0.1",
-  "main": "tailwind-presets.cjs",
+  "main": "./dist/lib/alias-ui-framework-presets.cjs",
   "license": "MIT",
   "files": [
     "dist"
   ],
-  "module": "./dist/lib/alias-ui-framework-presets.es.js",
   "scripts": {
     "build": "rm -rf ./dist/* && vite build"
   },
