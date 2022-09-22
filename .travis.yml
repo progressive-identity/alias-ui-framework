@@ -9,8 +9,10 @@ cache: npm
 script:
   - npm run build
 deploy:
-  provider: script
-  script: npm run semantic-release
+  provider: npm
+  email: $NPM_EMAIL
+  api_key: $NPM_TOKEN
   on:
     branch: main
+  skip_cleanup: true
 
