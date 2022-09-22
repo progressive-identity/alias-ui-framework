@@ -351,4 +351,4 @@ $RECYCLE.BIN/
 
 # In case of Clever Cloud deployment
 .clever.json
-
+.storybook-static
