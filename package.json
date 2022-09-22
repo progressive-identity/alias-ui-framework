@@ -29,7 +29,8 @@
     "compare-node-versions": "node scripts/nodeVersionComparator.mjs",
     "build:types": "vue-tsc --declaration --emitDeclarationOnly",
     "typecheck": "vue-tsc --noEmit",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "root": true,
@@ -88,6 +89,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "8.7.1",
+    "husky": "^8.0.1",
     "postcss": "^8.4.16",
     "prettier": "2.7.1",
     "prettier-plugin-tailwindcss": "0.1.13",
