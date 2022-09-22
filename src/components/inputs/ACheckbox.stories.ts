@@ -1,10 +1,15 @@
 import ACheckbox from './ACheckbox.vue'
 import { Meta, StoryFn } from '@storybook/vue3'
+import { ArgTypeUtils } from '../../../utils/ArgTypeUtils'
+
+const defaultArgTypes = ArgTypeUtils.buildDefaultArgTypesFromProps(
+  ACheckbox.props
+)
 
 export default {
   title: 'Atomics/ACheckbox',
   component: ACheckbox,
-  argTypes: {},
+  argTypes: { ...defaultArgTypes },
 } as Meta<typeof ACheckbox>
 
 const Template: StoryFn<typeof ACheckbox> = (args) => ({
