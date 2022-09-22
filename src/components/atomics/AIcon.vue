@@ -3,11 +3,11 @@
 </template>
 <script setup lang="ts">
 import { computed, PropType, toRefs } from 'vue'
-import { IconSizes } from '../../AliasSizes'
+import { IconSizes } from '../../constants/AliasSizes'
 // TODO: find a way to dynamically import only the used component at compile time in the project using Alias UI Framework
 import * as outlineHeroicons from '@heroicons/vue/24/outline'
 import * as solidHeroicons from '@heroicons/vue/24/solid'
-import { AliasIconTypes } from '../../AliasIcons'
+import { AliasIconTypes } from '../../constants/AliasIcons'
 
 const props = defineProps({
   /**

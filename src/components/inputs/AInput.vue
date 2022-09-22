@@ -26,9 +26,12 @@
 
 <script setup lang="ts">
 import { computed, nextTick, PropType, reactive, toRefs } from 'vue'
-import { HtmlInputTypeAttribute, HtmlInputTypes } from '../../HtmlTypes'
+import {
+  HtmlInputTypeAttribute,
+  HtmlInputTypes,
+} from '../../constants/HtmlTypes'
 import { Rule, validate } from '../../composables/useValidation'
-import { InputSizes } from '../../AliasSizes'
+import { InputSizes } from '../../constants/AliasSizes'
 import AIcon from '../atomics/AIcon.vue'
 import AInputErrors from './AInputErrors.vue'
 

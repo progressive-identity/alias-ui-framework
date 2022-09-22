@@ -27,7 +27,7 @@
 <script setup lang="ts">
 import { Switch, SwitchGroup, SwitchLabel } from '@headlessui/vue'
 import { PropType, toRefs } from 'vue'
-import { AliasColorNames } from '../../AliasColors'
+import { AliasColorNames } from '../../constants/AliasColors'
 
 const props = defineProps({
   type: { type: String as PropType<AliasColorNames>, required: true },

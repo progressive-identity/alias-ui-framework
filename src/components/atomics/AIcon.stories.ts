@@ -1,8 +1,8 @@
 import AIcon from './AIcon.vue'
 import { Meta, StoryFn } from '@storybook/vue3'
 import { ArgTypeUtils } from '../../../utils/ArgTypeUtils'
-import { IconSizes } from '../../AliasSizes'
-import { AliasIconTypes } from '../../AliasIcons'
+import { IconSizes } from '../../constants/AliasSizes'
+import { AliasIconTypes } from '../../constants/AliasIcons'
 
 const typePropName = ArgTypeUtils.propNameToString(AIcon, 'type')
 const sizePropName = ArgTypeUtils.propNameToString(AIcon, 'size')

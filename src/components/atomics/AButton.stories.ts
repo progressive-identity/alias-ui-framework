@@ -1,9 +1,9 @@
 import AButton from './AButton.vue'
 import { Meta, StoryFn } from '@storybook/vue3'
 import { ArgTypeUtils } from '../../../utils/ArgTypeUtils'
-import { AliasColorNames } from '../../AliasColors'
-import { ButtonSizes } from '../../AliasSizes'
-import { AliasIconTypes } from '../../AliasIcons'
+import { AliasColorNames } from '../../constants/AliasColors'
+import { ButtonSizes } from '../../constants/AliasSizes'
+import { AliasIconTypes } from '../../constants/AliasIcons'
 
 const colorPropName = ArgTypeUtils.propNameToString(AButton, 'color')
 const sizePropName = ArgTypeUtils.propNameToString(AButton, 'size')

@@ -1,4 +1,4 @@
-import { ERROR_MESSAGES, isEMailValid, isEmpty } from '../../utils/validation'
+import { ERROR_MESSAGES, isEMailValid, isEmpty } from '../utils/validation'
 
 type State = { valid: boolean; errors: string[] }
 type Props = { [key: string]: any }
