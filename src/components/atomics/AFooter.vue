@@ -56,18 +56,26 @@ const props = defineProps({
     default: '',
   },
   /**
-   *The links displayed in footer
-   */
+   * Links redirecting outside the app   */
   externalLinks: {
     type: Array,
     default: () => [],
   },
   /**
-   *The links displayed in footer
-   */
-  pagesRedirection: {
+   * Links redirecting inside the app   */
+  internalLinks: {
     type: Array,
     default: () => [],
   },
 })
 </script>
+
+<style scoped>
+.flex-space-12 {
+  @apply alias-flex alias-justify-center alias-space-x-12;
+}
+
+.flex-space-6 {
+  @apply alias-flex alias-justify-center alias-space-x-6;
+}
+</style>
