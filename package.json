@@ -55,12 +55,15 @@
     "not ie 11"
   ],
   "release": {
-    "branches": ["main"]
+    "branches": [
+      "main"
+    ]
   },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
+    "@alias-code-is-law/alias-tailwind-presets": "^0.0.1",
     "@headlessui/vue": "^1.7.2",
     "@rushstack/eslint-patch": "^1.2.0",
     "vue": "^3.2.37"

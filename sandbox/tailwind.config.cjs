@@ -2,7 +2,7 @@
 
 module.exports = {
   presets: [
-    require('../presets/tailwind-presets.cjs')
+    require('@alias-code-is-law/alias-tailwind-presets')
   ],
   content: ["./src/**/*.{html,js,vue,ts,tsx,jsx}"],
   plugins: [],
