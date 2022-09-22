@@ -14,6 +14,6 @@ deploy:
   api_key: $NPM_TOKEN
   on:
     branch: main
-    tags: true
+    tags: true # TODO: see if we want to activate this. If true, it means a tagged commit must be done to activate the npm publish
   skip_cleanup: true
 
