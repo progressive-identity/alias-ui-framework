@@ -1,18 +1,16 @@
 <template>
-  <!--  <CookiesBanner />-->
   <footer class="alias-text-alias-gray-400 alias-p-4">
     <div class="alias-mx-auto alias-max-w-7xl alias-space-y-4">
-      <div class="alias-flex alias-justify-center alias-space-x-12">
+      <div class="flex-space-12">
         <router-link
-          v-for="link in pagesRedirection"
+          v-for="link in internalLinks"
           :key="link.type"
-          :to="link"
-          class="hover:alias-text-gray-600"
+          :to="link.params.slug"
+          class="alias-mx-10 hover:alias-text-gray-600"
           >{{ link.label }}
-          <!--          {{ $t(`menu.footer.${link.type}`) }}-->
         </router-link>
       </div>
-      <div class="alias-flex alias-justify-center alias-space-x-6">
+      <div class="flex-space-6">
         <a
           v-for="link in props.externalLinks"
           :key="link.name"
@@ -20,8 +18,7 @@
           :href="link.href"
           class="hover:alias-text-gray-600"
         >
-          external link
-          <!--          <UIcon :path="link.icon" :size="24" />-->
+          {{ link.name }}
         </a>
       </div>
       <div>
@@ -38,15 +35,10 @@
         v{{ version }}
       </p>
     </div>
-    {{ pagesRedirection }}
   </footer>
 </template>
 
 <script setup>
-// import UIcon from '@/components/basic/UIcon.vue'
-// import CookiesBanner from '@/components/section/CookiesBanner.vue'
-// import { mdiDiscord, mdiGithub, mdiLinkedin, mdiTwitter, mdiWeb } from '@mdi/js'
-
 const props = defineProps({
   /**
    *The actual version of the app
