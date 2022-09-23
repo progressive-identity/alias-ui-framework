@@ -12,10 +12,10 @@
 </template>
 <script setup lang="ts">
 import { computed, PropType, toRefs } from 'vue'
-import { AliasColorNames } from '../../AliasColors'
-import { ButtonSizes } from '../../AliasSizes'
+import { AliasColorNames } from '../../constants/AliasColors'
+import { ButtonSizes } from '../../constants/AliasSizes'
 import AIcon from './AIcon.vue'
-import { AliasIconTypes } from '../../AliasIcons'
+import { AliasIconTypes } from '../../constants/AliasIcons'
 
 const props = defineProps({
   /**

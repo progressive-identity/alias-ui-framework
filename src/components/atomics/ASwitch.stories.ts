@@ -1,7 +1,7 @@
 import ASwitch from './ASwitch.vue'
 import { Meta, StoryFn } from '@storybook/vue3'
 import { ArgTypeUtils } from '../../../utils/ArgTypeUtils'
-import { AliasColorNames } from '../../AliasColors'
+import { AliasColorNames } from '../../constants/AliasColors'
 
 export default {
   title: 'Atomics/ASwitch',

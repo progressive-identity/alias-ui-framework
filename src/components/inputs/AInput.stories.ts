@@ -1,8 +1,8 @@
 import AInput from './AInput.vue'
 import { Meta, StoryFn } from '@storybook/vue3'
 import { ArgTypeUtils } from '../../../utils/ArgTypeUtils'
-import { HtmlInputTypes } from '../../HtmlTypes'
-import { InputSizes } from '../../AliasSizes'
+import { HtmlInputTypes } from '../../constants/HtmlTypes'
+import { InputSizes } from '../../constants/AliasSizes'
 
 const typePropName = ArgTypeUtils.propNameToString(AInput, 'type')
 const sizePropName = ArgTypeUtils.propNameToString(AInput, 'size')

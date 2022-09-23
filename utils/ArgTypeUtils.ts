@@ -1,4 +1,5 @@
 import { InputType } from '@storybook/csf'
+import { DefaultProps } from 'vue/types/options'
 
 export abstract class ArgTypeUtils {
   // TODO: write doc
@@ -41,7 +42,7 @@ export abstract class ArgTypeUtils {
   }
 
   static buildDefaultArgTypesFromProps(
-    props: Record<string, any>
+    props: DefaultProps
   ): { [key: string]: InputType } | {} {
     let argTypes = {}
     for (const [key, value] of Object.entries(props)) {

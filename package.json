@@ -32,23 +32,6 @@
     "semantic-release": "semantic-release",
     "prepare": "husky install"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
-    },
-    "rules": {}
-  },
-  "eslintIgnore": [
-    "./src/vite-env.d.ts"
-  ],
   "browserslist": [
     "> 1%",
     "last 2 versions",
