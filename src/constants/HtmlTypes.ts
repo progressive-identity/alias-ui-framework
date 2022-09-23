@@ -1,0 +1,26 @@
+export const HtmlInputTypes = [
+  'button',
+  'checkbox',
+  'color',
+  'date',
+  'datetime-local',
+  'email',
+  'file',
+  'hidden',
+  'image',
+  'month',
+  'number',
+  'password',
+  'radio',
+  'range',
+  'reset',
+  'search',
+  'submit',
+  'tel',
+  'text',
+  'time',
+  'url',
+  'week',
+] as const
+
+export type HtmlInputTypeAttribute = typeof HtmlInputTypes[number]

@@ -29,25 +29,9 @@
     "compare-node-versions": "node scripts/nodeVersionComparator.mjs",
     "build:types": "vue-tsc --declaration --emitDeclarationOnly",
     "typecheck": "vue-tsc --noEmit",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "prepare": "husky install"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
-    },
-    "rules": {}
-  },
-  "eslintIgnore": [
-    "./src/vite-env.d.ts"
-  ],
   "browserslist": [
     "> 1%",
     "last 2 versions",
@@ -55,14 +39,19 @@
     "not ie 11"
   ],
   "release": {
-    "branches": ["main"]
+    "branches": [
+      "main"
+    ]
   },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
+    "@alias-code-is-law/alias-tailwind-presets": "^0.0.1",
     "@headlessui/vue": "^1.7.2",
+    "@heroicons/vue": "^2.0.11",
     "@rushstack/eslint-patch": "^1.2.0",
+    "is_js": "^0.9.0",
     "vue": "^3.2.37"
   },
   "devDependencies": {
@@ -74,6 +63,7 @@
     "@storybook/builder-vite": "^0.2.2",
     "@storybook/testing-library": "^0.0.13",
     "@storybook/vue3": "^6.5.11",
+    "@types/is": "^0.0.21",
     "@vitejs/plugin-vue": "^3.1.0",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^11.0.1",
@@ -82,6 +72,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "8.7.1",
+    "husky": "^8.0.1",
     "postcss": "^8.4.16",
     "prettier": "2.7.1",
     "prettier-plugin-tailwindcss": "0.1.13",

@@ -10,3 +10,10 @@ export enum IconSizes {
   MEDIUM = 'medium',
   LARGE = 'large',
 }
+
+export enum InputSizes {
+  SMALL = 'small',
+  MEDIUM = 'medium',
+  LARGE = 'large',
+  EXTRA_LARGE = 'extra-large',
+}
