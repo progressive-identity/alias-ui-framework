@@ -6,6 +6,7 @@ import { InputSizes } from '../../constants/AliasSizes'
 
 const typePropName = ArgTypeUtils.propNameToString(AInput, 'type')
 const sizePropName = ArgTypeUtils.propNameToString(AInput, 'size')
+// @ts-ignore
 const defaultArgTypes = ArgTypeUtils.buildDefaultArgTypesFromProps(AInput.props)
 
 export default {
